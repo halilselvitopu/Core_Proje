@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Feature
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Update Feature</h3>
+</div>
+
+@using (Html.BeginForm("Index", "Feature", FormMethod.Post))
+
+{
+
+    @Html.HiddenFor(x => x.FeatureId)
+    <br />
+    @Html.Label("Feature Title")
+    @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+    <br />
+    <label>Name and Surname</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Role</label>
+    @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update</button>
+}
