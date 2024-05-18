@@ -10,7 +10,7 @@ namespace Core_Proje.Controllers
         FeatureManager featureManager = new FeatureManager(new EfFeatureDal());
         public IActionResult Index()
         {
-            ViewBag.v1 = "Edit";
+            ViewBag.v1 = "Update Feature";
             ViewBag.v2 = "Features";
             ViewBag.v3 = "Feature Page";
             var values = featureManager.GetByIdT(1);

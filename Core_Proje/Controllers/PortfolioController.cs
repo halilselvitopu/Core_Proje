@@ -23,9 +23,9 @@ namespace Core_Proje.Controllers
         [HttpGet]
         public IActionResult AddPortfolio()
         {
-            ViewBag.v1 = "Project List";
+            ViewBag.v1 = "Add New Project";
             ViewBag.v2 = "Projects";
-            ViewBag.v3 = "Add Project";
+            ViewBag.v3 = "Add New Project";
             return View();
         }
 

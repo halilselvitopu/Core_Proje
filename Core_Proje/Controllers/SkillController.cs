@@ -21,9 +21,9 @@ namespace Core_Proje.Controllers
         [HttpGet]
         public IActionResult AddSkill()
         {
-            ViewBag.v1 = "Add Skill";
+            ViewBag.v1 = "Add New Skill";
             ViewBag.v2 = "Skills";
-            ViewBag.v3 = "Add Skill";
+            ViewBag.v3 = "Add New Skill";
             return View();
         }
 
