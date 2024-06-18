@@ -8,7 +8,7 @@ namespace Core_Proje.Controllers
         {
             ViewBag.v1 = "Dashboard";
             ViewBag.v2 = "Statistics";
-            ViewBag.v3 = "Statistic Page";
+            ViewBag.v3 = "Statistic List";
             return View();
         }
     }
