@@ -1,7 +1,7 @@
 ﻿@model EntityLayer.Concrete.About
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 
@@ -13,28 +13,50 @@
 
 {
 
-    @Html.HiddenFor(x => x.AboutId)
-    <br />
-    @Html.Label("About Title")
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-    <br />
-    <label>Age</label>
-    @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
-    <br />
-    @Html.Label("Phone Number")
-    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
-    <br />
-    @Html.Label("Mail")
-    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
-    <br />
-    @Html.Label("Address")
-    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
-    <br />
-    @Html.Label("Image URL")
-    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-    <br />
-    <label>Description</label>
-    @Html.TextAreaFor(x => x.Description, 10, 2, new { @class = "form-control" })
-    <br />
-    <button class="btn btn-success">Update</button>
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-description"> Update About </p>
+                <form class="forms-sample">
+
+                    <div class="form-group">
+                        <label>ID</label>
+                        @Html.TextBoxFor(x => x.AboutId, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Title</label>
+                        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>MaiL</label>
+                        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                    </div
+                    <div class="form-group">
+                        <label>Image URL</label>
+                        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea1">Description</label>
+                        @Html.TextAreaFor(x => x.Description, 6, 3, new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Update</button>
+                    <button class="btn btn-dark">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
 }

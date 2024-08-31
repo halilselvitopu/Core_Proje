@@ -8,6 +8,12 @@
 @using (Html.BeginForm("UpdateService", "Service", FormMethod.Post))
 
 {
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-description"> Update Service </p>
+                <form class="forms-sample">
 
     @Html.HiddenFor(x => x.ServiceId)
     <br />
@@ -18,4 +24,8 @@
     @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
     <br />
     <button class="btn btn-outline-success">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
 }

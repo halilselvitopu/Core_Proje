@@ -12,9 +12,7 @@ namespace Core_Proje.Controllers
         PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal());
         public IActionResult Index()
         {
-            ViewBag.v1 = "Project List";
-            ViewBag.v2 = "Projects";
-            ViewBag.v3 = "Project List";
+            
             PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal());
             var values = portfolioManager.GetListT();
             return View(values);
@@ -23,18 +21,14 @@ namespace Core_Proje.Controllers
         [HttpGet]
         public IActionResult AddPortfolio()
         {
-            ViewBag.v1 = "Add New Project";
-            ViewBag.v2 = "Projects";
-            ViewBag.v3 = "Add New Project";
+            
             return View();
         }
 
         [HttpPost]
         public IActionResult AddPortfolio(Portfolio portfolio)
         {
-            ViewBag.v1 = "Project List";
-            ViewBag.v2 = "Projects";
-            ViewBag.v3 = "Add Project";
+            
             PortfolioValidator validations = new PortfolioValidator();
             ValidationResult validationResult = validations.Validate(portfolio);
             if (validationResult.IsValid)
@@ -65,9 +59,6 @@ namespace Core_Proje.Controllers
         public IActionResult UpdatePortfolio(int id)
         {
             var values = portfolioManager.GetByIdT(id);
-            ViewBag.v1 = "Update Portfolio";
-            ViewBag.v2 = "Portfolios";
-            ViewBag.v3 = "Update Portfolio";
             return View(values);
         }
 

@@ -4,11 +4,15 @@
     Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-
-
 @using (Html.BeginForm("AddService", "Service", FormMethod.Post))
 
 {
+     <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-description"> Add New Service </p>
+                <form class="forms-sample">
     <br />
     @Html.Label("Service Title")
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
@@ -17,6 +21,10 @@
     @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
     <br />
     <button class="btn btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
 }
 
 
