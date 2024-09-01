@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void DeleteT(WriterMessage t)
         {
-            throw new NotImplementedException();
+            _writermessagedal.Delete(t);
         }
 
         public WriterMessage GetByIdT(int id)
