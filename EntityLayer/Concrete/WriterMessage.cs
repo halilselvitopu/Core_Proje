@@ -15,6 +15,7 @@ namespace EntityLayer.Concrete
         public string ReceiverName { get; set; }
         public string Subject { get; set; }
         public string MessageContent { get; set; }
+        public string? ImageUrl { get; set; }
         public DateTime Date { get; set; }
     }
 }

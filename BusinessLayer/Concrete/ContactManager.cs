@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public Contact GetByIdT(int id)
         {
-            throw new NotImplementedException();
+            return _contactdal.GetById(id);
         }
 
         public List<Contact> GetListT()
@@ -40,7 +40,7 @@ namespace BusinessLayer.Concrete
 
         public void UpdateT(Contact t)
         {
-            throw new NotImplementedException();
+            _contactdal.Update(t);
         }
     }
 }
