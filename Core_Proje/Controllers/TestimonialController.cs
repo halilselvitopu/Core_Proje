@@ -13,6 +13,20 @@ namespace Core_Proje.Controllers
             var values = testimonialManager.GetListT();
             return View(values);
         }
+
+        [HttpGet]
+        public IActionResult AddTestimonial()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddTestimonial(Testimonial testimonial)
+        {
+            testimonialManager.AddT(testimonial);
+            return RedirectToAction("Index");
+        }
         public IActionResult DeleteTestimonial(int id)
         {
             var values = testimonialManager.GetByIdT(id);

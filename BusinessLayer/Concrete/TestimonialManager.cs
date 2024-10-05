@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public void AddT(Testimonial t)
         {
-            throw new NotImplementedException();
+           _testimonialdal.Insert(t);
         }
 
         public void DeleteT(Testimonial t)

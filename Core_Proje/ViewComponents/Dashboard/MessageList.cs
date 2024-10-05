@@ -2,16 +2,18 @@
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Core_Proje.ViewComponents.Dashboard
 {
     public class MessageList : ViewComponent
     {
        
+        MessageManager messageManager = new MessageManager(new EfMessageDal());
         public IViewComponentResult Invoke()
         {
-            
-            return View();
+            var values = messageManager.GetListT().TakeLast(5).ToList();
+            return View(values);
         }
     }
 }
