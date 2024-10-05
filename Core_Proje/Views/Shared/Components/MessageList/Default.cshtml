@@ -20,7 +20,7 @@
                         <div class="flex-grow">
                             <div class="d-flex d-md-block d-xl-flex justify-content-between">
                                 <h6 class="preview-subject">@item.Name</h6>
-                                <p class="text-muted text-small">@((DateTime)item.Date).ToString("dd-MMM-yyyy"))</p>
+                                <p class="text-muted text-small">@(((DateTime)item.Date).ToString("dd-MMM-yyyy"))</p>
                             </div>
                             <p class="text-muted">@item.Content.Substring(0,25)...</p>
                         </div>
